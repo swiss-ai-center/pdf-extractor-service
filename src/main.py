@@ -75,7 +75,7 @@ class MyService(Service):
         json_data = {'text': text_data}
 
         # Encode the dictionary to JSON
-        #json_data = CustomEncoder().encode(json_data)
+        # json_data = CustomEncoder().encode(json_data)
 
         # Return the result with the required field name
         return {

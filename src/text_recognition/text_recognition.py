@@ -3,6 +3,7 @@
 import pdfplumber
 
 class PDFReader:
+    
     def __init__(self, file):
         self.file = file
     

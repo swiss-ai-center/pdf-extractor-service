@@ -1,5 +1,5 @@
 [project]
-name = "pdf-extractor" # Edit this and remove comment
+name = "pdf-extractor-service" # Edit this and remove comment
 
 [tool.pytest.ini_options]
 pythonpath = [".", "src"]

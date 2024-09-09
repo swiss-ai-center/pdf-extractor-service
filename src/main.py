@@ -66,7 +66,7 @@ class MyService(Service):
         # The 'file' is the PDF file input, assumed to be a file-like object or bytes
         pdf_file = data["file"].data  # PDF file in bytes
         # Create a PDFReader instance and pass the file object directly
-        pdf_reader = PDFReader(file=file)
+        pdf_reader = PDFReader(file=pdf_file)
 
         # Read all pages of the PDF and extract the text
         text_data = pdf_reader.read_first_page()  # Use read_first_page() if only the first page is needed

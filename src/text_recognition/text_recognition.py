@@ -24,3 +24,7 @@ class PDFReader:
             else:
                 self.logger.error("PDF has no pages")
                 raise ValueError("PDF has no pages")
+
+
+
+# Ensure that there are two blank lines between top-level functions or classes and exactly one blank line at the end.

@@ -4,6 +4,7 @@ import logging
 import pdfplumber
 
 class PDFReader:
+    
     def __init__(self, file):
         self.file = file
         self.logger = logging.getLogger(__name__)
@@ -24,7 +25,5 @@ class PDFReader:
             else:
                 self.logger.error("PDF has no pages")
                 raise ValueError("PDF has no pages")
-
-
 
 # Ensure that there are two blank lines between top-level functions or classes and exactly one blank line at the end.

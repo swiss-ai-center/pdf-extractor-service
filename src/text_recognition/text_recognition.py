@@ -1,6 +1,7 @@
 # Code based on https://gitlab.forge.hefr.ch/icoservices/deepmarket/image/text-recognition
 
 import logging
+import pdfplumber
 
 class PDFReader:
     def __init__(self, file):

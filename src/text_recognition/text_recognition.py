@@ -3,8 +3,8 @@
 import logging
 import pdfplumber
 
+
 class PDFReader:
-    
     def __init__(self, file):
         self.file = file
         self.logger = logging.getLogger(__name__)

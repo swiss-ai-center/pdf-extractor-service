@@ -1,6 +1,6 @@
 import asyncio
 import time
-
+import io
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
@@ -69,7 +69,7 @@ class MyService(Service):
         pdf_file_obj = io.BytesIO(pdf_file)
 
         # Create a PDFReader instance and pass the file-like object
-        pdf_reader = PdfReader(pdf_file_obj)
+        pdf_reader = PDFReader(pdf_file_obj)
 
         # Read all pages of the PDF and extract the text
         text_data = pdf_reader.read_first_page()  # Use read_first_page() if only the first page is needed

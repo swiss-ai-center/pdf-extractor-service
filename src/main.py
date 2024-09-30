@@ -36,8 +36,8 @@ class MyService(Service):
 
     def __init__(self):
         super().__init__(
-            name="pdf-extractor",
-            slug="pdf-extractor",
+            name="PDF Extractor",
+            slug="PDF Extractor",
             url=settings.service_url,
             summary=api_summary,
             description=api_description,
@@ -65,8 +65,11 @@ class MyService(Service):
     def process(self, data):
         # The 'file' is the PDF file input, assumed to be a file-like object or bytes
         pdf_file = data["file"].data  # PDF file in bytes
-        # Create a PDFReader instance and pass the file object directly
-        pdf_reader = PDFReader(file=pdf_file)
+        # Wrap the bytes object in a BytesIO file-like object
+        pdf_file_obj = io.BytesIO(pdf_file)
+
+        # Create a PDFReader instance and pass the file-like object
+        pdf_reader = PdfReader(pdf_file_obj)
 
         # Read all pages of the PDF and extract the text
         text_data = pdf_reader.read_first_page()  # Use read_first_page() if only the first page is needed

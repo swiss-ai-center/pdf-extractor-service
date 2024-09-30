@@ -78,11 +78,11 @@ class MyService(Service):
         json_data = {'text': text_data}
 
         # Encode the dictionary to JSON
-        # json_data = CustomEncoder().encode(json_data)
+        json_bytes = json.dumps(json_data).encode('utf-8')
 
         # Return the result with the required field name
         return {
-            "result": TaskData(data=json_data, type=FieldDescriptionType.APPLICATION_JSON),
+            "result": TaskData(data=json_bytes, type=FieldDescriptionType.APPLICATION_JSON),
         }
 
 

@@ -38,7 +38,7 @@ class MyService(Service):
     def __init__(self):
         super().__init__(
             name="PDF Extractor",
-            slug="PDF Extractor",
+            slug="pdf-extractor",
             url=settings.service_url,
             summary=api_summary,
             description=api_description,

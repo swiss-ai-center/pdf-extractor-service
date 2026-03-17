@@ -7,6 +7,8 @@ from common_code.common.models import FieldDescription, ExecutionUnitTag
 from common_code.tasks.models import TaskData
 # Imports required by the service's model
 from text_recognition.text_recognition import PDFReader
+import io
+import json
 
 api_description = """This service extracts text for a PDF file.
 """
@@ -77,4 +79,3 @@ class MyService(Service):
         return {
             "result": TaskData(data=json_bytes, type=FieldDescriptionType.APPLICATION_JSON),
         }
-
